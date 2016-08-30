@@ -1,0 +1,78 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+<!-- Bootstrap Core CSS -->
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/angular-toastr.css">
+    <!-- Custom CSS -->
+    <link href="/stylesheets/index.css" rel="stylesheet">
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    <!-- Validador de bootstrap -->
+    <!--<script type="text/javascript" src="js/validator.js"></script>-->
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery.backstretch.min.js"></script>
+
+
+<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/angular/angular.js"></script>
+<script type="text/javascript" src="/Cliente/app/lib/ngStorage.js"></script>
+<script type="text/javascript" src="/Cliente/app/lib/loading-bar.js"></script>
+<!-- Third-party Libraries -->
+<script src="/javascripts/angular-animate.js"></script>
+<script src="/javascripts/angular-messages.js"></script>
+<script src="/javascripts/angular-resource.js"></script>
+<script src="/javascripts/angular-sanitize.js"></script>
+<script src="/javascripts/angular-ui-router.js"></script>
+<script src="/javascripts/angular-toastr.tpls.js"></script>
+<script src="/javascripts/angular-route.js"></script>
+<script src="/javascripts/satellizer.js"></script>
+    
+    <script type="text/javascript" src="/Cliente/models/app.js"></script>
+    <script type="text/javascript" src="/Cliente/models/services.js"></script>
+    <script type="text/javascript" src="/Cliente/controllers/Login.js"></script>
+</head>
+<body ng-app="Miggos_Module" app-controller="">
+    <!--añadimos aquí el controlador notasController-->
+<div>
+<button type="submit" ng-click="me()" class="btn">Cargar</button>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>
+                Email
+            </th>
+            <th>
+                Nombres
+            </th>
+            <th>
+                Apellidos
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="datos in Datos">
+            <td>
+                {{datos.Email}}
+            </td>
+            <td>
+                {{datos.Nombres}}
+            </td>
+            <td>
+                {{datos.Apellidos}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

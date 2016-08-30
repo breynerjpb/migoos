@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenidos a Migoos.com </title>
+</head>
+<body>
+<article class="article_1">
+    <div  class="bgImage">
+        <div class="bgImage--blur"></div>
+    </div>
+    <nav  class="navbar navbar-default">
+        <div class="container-fluid ">
+            <div class="row">
+                <div id="logonav" class="navbar-brand navbar-center">
+                    <a  href="#"> <img class="logo" src="public/images/logob.png"></a>
+                </div>
+                <div id="redes" class="col-xs-6 col-sm-8 col-md-6 col-lg-6 ">
+                    <label>Siguenos</label>
+                    <a href="https://www.facebook.com" ><img class="logo-social responsive-img" src="public/images/social/facebook.png" alt=""></a>
+                    <a href="https://plus.google.com"><img class="logo-social responsive-img" src="public/images/social/google.png" alt=""></a>
+                    <a href="https://twitter.com"><img class="logo-social responsive-img" src="public/images/social/twitter.png" alt=""></a>
+                    <a href="https://www.instagram.com"><img class="logo-social responsive-img" src="public/images/social/instagram.png" alt=""></a>
+                </div>
+                <div id="botonr" class="col-xs-4 col-sm-4 col-md-6 col-lg-6">
+                    <!--  <input id="login-r" type="button" value="Registrate" onclick="mostrar();" class=" pull-right btn btn-info btn-large"> --></div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div id="Csociales" class="col-sm-5 col-md-5 col-lg-5  visible-md  visible-lg" ng-controller="HomeCtrl">
+
+                    <div class="container-social ">
+                        <div class="row">
+                            <div class=" col-md-10 ">
+                                <a href="#" title="Facebook" class=" btn btn-block btn-social btn-lg btn-facebook " ng-click="authenticate('facebook')">
+                                    <i class="fa fa-facebook"><img class="logo-social responsive-img" src="public/images/social/facebook.png" alt=""></i> Conectate con Facebook
+                                </a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-10 ">
+                                <a href="#" title="Google" class="btn btn-block btn-social btn-lg btn-google" ng-click="authenticate('google')">
+                                    <i class="fa fa-google-plus "><img class="logo-social responsive-img" src="public/images/social/google.png" alt=""></i> Conectate con Google
+                                </a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-10">
+                                <a href="#" title="Windows Live Hotmail" class="btn btn-block btn-social btn-lg btn-twitter" ng-click="authenticate('twitter')">
+                                    <i class="fa fa-twitter"><img class="logo-social responsive-img" src="public/images/social/twitter.png" alt=""></i> Conectate con Twitter
+                                </a>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12  ">
+                                    <br>
+                                    <small class="spanColor">(sólo es una forma más rápida de registrarte, no publicamos nada en tus redes sociales.)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-1 middle-border visible-md  visible-lg"></div>
+                <div class="col-sm-1"></div>
+
+                <div class=" col-md-5 col-md-push-0">
+                    <div id="login">
+                        <div class="form-box">
+                            <div class="form-top visible-md  visible-lg">
+                                <div class="form-top-left">
+                                    <div class="">
+                                        <img src="public/images/logob.png" class=" logo img-fluid">
+                                    </div>
+                                </div>
+                                <div class="form-top-right">
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-bottom" ng-controller="HomeCtrl">
+                            <form role="form" ng-submit="signin()" method="POST" class="login-form" id="form_Login" ng-controller="HomeCtrl" name="userForm" novalidate>
+
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-username">Username</label>
+                                    <input type="email" name="Email" id="Email" ng-model="Email" placeholder="Email o Usuario" class="form-username form-control" autocorrect="off" required data-error="Digite su nombre de usuario">
+                                    <span class="messages" style="color:red;" ng-show="userForm.$submitted || userForm.Email.$touched">
+                                        <span ng-show="userForm.Email.$error.required">Dege ingresar el email.</span>
+                                        <span ng-show="userForm.Email.$error.email">El formato del email es incorrecto.</span>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-password">Password</label>
+                                    <input type="password" maxlength="40" autocorrect="off" id="Contrasena" name="Contrasena" placeholder="Contraseña" class="form-password form-control" ng-model="Contrasena"  required data-error="Digite su password">
+                                    <span class="messages" style="color:red;" ng-show="userForm.$submitted || userForm.Contrasena.$touched">
+                                        <span ng-show="userForm.Contrasena.$error.required">Dege ingresar su clave.</span>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn" ng-disabled="userForm.$invalid">Entrar!</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="form-bottom2 col-md-12 col-sm-12" >
+                            <p class="enunciado text-left"> Haz olvidado tu contraseña ? <a class="link" href="#">Click aquí</a> </p>
+                            <p class="enunciado text-left"> No tienes cuenta ?  <a onclick="registrar();" class="link" href="#">Registrate</a> </p>
+                        </div>
+                    </div>
+
+                    <div id="registro" style="display: none;">
+                        <div class="form-box">
+                            <div class="form-top visible-md  visible-lg">
+                                <div class="form-top-left">
+                                    <div class="">
+                                        <img src="public/images/logob.png" class=" logo img-fluid">
+                                    </div>
+                                </div>
+                                <div class="form-top-right">
+                                    <i class="fa fa-pencil"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <div class="social-movil hidden-md hidden-lg">
+                                <div class="row">
+                                    <div class=" col-md-12">
+                                        <a href="#" title="Facebook" class=" btn btn-block btn-social btn-lg btn-facebook ">
+                                            <i class="fa fa-facebook"></i> Conectate con Facebook
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <form role="form" ng-submit="signup()" method="POST" class="login-form" data-toggle="validator" ng-controller="registrarCtrl" name="formregistrar" novalidate>
+                                <div class="form-group has-feedback">
+                                    <label class="sr-only" for="form-username">Nombres</label>
+                                    <input type="text"  name="regis_Nombres" placeholder="Nombre" class="form-username form-control" id="regis_Nombres" ng-model="regis_Nombres" required data-error="Debe ingresar sus nombres">
+                                    <span class="messages" style="color:red;" ng-show="formregistrar.$submitted || formregistrar.regis_Nombres.$touched">
+                                        <span ng-show="formregistrar.regis_Nombres.$error.required">Dege ingresar sus nombres.</span>
+                                    </span>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="sr-only" for="form-username">Apellidos</label>
+                                    <input type="text" name="regis_Apellidos" required data-error="Debe ingresar sus apellidos" placeholder="Apellidos" ng-model="regis_Apellidos" class="form-username form-control" id="regis_Apellidos">
+                                    <span class="messages" style="color:red;" ng-show="formregistrar.$submitted || formregistrar.regis_Apellidos.$touched">
+                                        <span ng-show="formregistrar.regis_Apellidos.$error.required">Dege ingresar sus apellidos.</span>
+                                    </span>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="sr-only" for="form-username">Email</label>
+                                    <input type="email" name="regis_Email" ng-model="regis_Email" placeholder="Email" class="form-username form-control" id="regis_Email" required data-error="Debe digitar su email">
+                                    <span class="messages" style="color:red;" ng-show="formregistrar.$submitted || formregistrar.regis_Email.$touched">
+                                        <span ng-show="formregistrar.regis_Email.$error.required">Dege ingresar su email.</span>
+                                        <span ng-show="formregistrar.regis_Email.$error.email">El formato del email es incorrecto.</span>
+                                    </span>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="sr-only" for="form-password">Password</label>
+                                    <input type="password" name="regis_Clave" ng-model="regis_Contrasena" placeholder="Contraseña" class="form-password form-control" id="regis_Clave" required data-error="Debe ingresar su password">
+                                    <span class="messages" style="color:red;" ng-show="formregistrar.$submitted || formregistrar.regis_Contrasena.$touched">
+                                        <span ng-show="formregistrar.regis_Contrasena.$error.required">Dege ingresar su clave.</span>
+                                    </span>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="sr-only" for=" form-password">C.Password</label>
+                                    <input type="password" name="regis_Repetir_Clave" ng-model="regis_Repetir_Contrasena" placeholder="Confirma Contraseña" class="form-password form-control" id="regis_Repetir_Clave" required data-error="Debe repetir su password">
+                                    <span class="messages" style="color:red;" ng-show="formregistrar.$submitted || formregistrar.regis_Repetir_Contrasena.$touched">
+                                        <span ng-show="formregistrar.regis_Repetir_Contrasena.$error.required">Dege repetir su clave.</span>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn" ng-disabled="formregistrar.$invalid">Registrate</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="form-bottom2 col-md-12 col-sm-12">
+                            <p class="enunciado text-left"> Ya tienes cuenta ?  <a  onclick="logiar();" class="link" href="#">Entra</a> </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6  visible-md visible-lg">
+                    <h1 class="spanColor">000.000</h1>
+                    <h3 class="spanColor"> Personas que hacen parte de Migoos </h3>
+                </div>
+                <div class="col-md-6 text-center">
+                    <p class="spanColor"><h5 class="spanColor">Descarga la aplicación</h5></p>
+                    <div class="con-tienda">
+                        <a href="#"> <img class="tienda" src="public/images/playstore.png" alt=""> </a>
+                        <a href="#"> <img class="tienda" src="public/images/appstore.png" alt=""> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="pie">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="nav-footer" role="navigation">
+                        <ul class="nav-pills">
+                            <li class="linkf"> <a href="#"> Información</a></li>
+                            <li class="linkf"> <a href="#"> Trabaja con Nosotros </a></li>
+                            <li class="linkf"> <a href="#"> Privacidad</a></li>
+                            <li class="linkf"> <a href="#"> Blog</a></li>
+                            <li class="linkf"> <a href="#"> Condiciones</a></li>
+                        </ul>
+                    </nav>
+                    <span class="text-right visible-md  visible-lg">© 2016 Migoos</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script languague="javascript">
+        function registrar() {
+            div = document.getElementById('registro');
+            div.style.display = '';
+            $("#login").attr("style","display:none");
+
+        }
+        function logiar() {
+            div = document.getElementById('login');
+            div.style.display = '';
+            $("#registro").attr("style","display:none");
+
+        }
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            var imagenes = [
+                "public/images/img2.jpg"
+                , "public/images/img2.png"
+                , "public/images/img3.png"
+                , "public/images/img1.png"
+            ];
+
+            // Precarga de todas la imagenes
+            $(imagenes).each(function(){
+                $("<img/>")[0].src = this;
+            });
+
+            // Almacena cual imagen esta activa
+            var index = 0;
+
+            // Aplicamos la primera imagen del arreglo
+            // y lo configuramos para que realice un efecto de transición (fadeIn)
+            // de 500 milisegundos entre cada cambio imagen
+            $.backstretch(imagenes[index], {speed: 500});
+
+            // setInterval es una funcion que se repite determinado tiempo
+            // en este caso cada 5000 milisegundos incrementando el index
+            // y aplicando una nueva imagen
+            setInterval(function() {
+                index = (index >= imagenes.length - 1) ? 0 : index + 1;
+                $.backstretch(imagenes[index]);
+            }, 5000);
+        });
+    </script>
+</article>
+<!-- /container -->
+</body>
+</html>

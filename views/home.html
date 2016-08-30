@@ -1,0 +1,33 @@
+
+<div>
+    <button type="submit" ng-click="logout()" class="btn">Cerrar Sesión</button>
+    <button type="submit" ng-click="me()" class="btn">Cargar</button>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>
+                Email
+            </th>
+            <th>
+                Nombres
+            </th>
+            <th>
+                Apellidos
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="datos in Datos">
+            <td>
+                {{datos.Email}}
+            </td>
+            <td>
+                {{datos.Nombres}}
+            </td>
+            <td>
+                {{datos.Apellidos}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

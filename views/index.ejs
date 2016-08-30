@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bienvenidos a Migoos</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/angular-toastr.css">
+    <!-- Custom CSS -->
+    <link href="/stylesheets/index.css" rel="stylesheet">
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    <!-- Validador de bootstrap -->
+    <!--<script type="text/javascript" src="js/validator.js"></script>-->
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery.backstretch.min.js"></script>
+
+
+<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/angular/angular.js"></script>
+<script type="text/javascript" src="/Cliente/app/lib/ngStorage.js"></script>
+<script type="text/javascript" src="/Cliente/app/lib/loading-bar.js"></script>
+<!-- Third-party Libraries -->
+<script src="/javascripts/angular-animate.js"></script>
+<script src="/javascripts/angular-messages.js"></script>
+<script src="/javascripts/angular-resource.js"></script>
+<script src="/javascripts/angular-sanitize.js"></script>
+<script src="/javascripts/angular-ui-router.js"></script>
+<script src="/javascripts/angular-toastr.tpls.js"></script>
+<script src="/javascripts/angular-route.js"></script>
+<script src="/javascripts/satellizer.js"></script>
+
+
+
+
+<script type="text/javascript" src="/Cliente/models/app.js"></script>
+<script type="text/javascript" src="/Cliente/models/services.js"></script>
+<script type="text/javascript" src="/Cliente/controllers/Login.js"></script>
+   <!-- <script src="javascripts/angular/angular.min.js"></script>
+    <script src="javascripts/angular/angular.js"></script>
+    <script src="main.js"></script>-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="Miggos_Module">
+            
+  <article class="article_1">
+      <div  class="bgImage">
+      <div class="bgImage--blur"></div>
+      </div>
+      <nav  class="navbar navbar-default">
+         <div class="container-fluid ">
+            <div class="row">
+            <div id="logonav" class="navbar-brand navbar-center">
+              <a  href="#"> <img class="logo" src="/images/logob.png"></a>
+            </div>
+            <div id="redes" class="col-xs-6 col-sm-8 col-md-6 col-lg-6 "> 
+            <label>Siguenos</label>
+            <a href="https://www.facebook.com" ><img class="logo-social responsive-img" src="/images/social/facebook.png" alt=""></a>
+            <a href="https://plus.google.com"><img class="logo-social responsive-img" src="/images/social/google.png" alt=""></a>
+            <a href="https://twitter.com"><img class="logo-social responsive-img" src="/images/social/twitter.png" alt=""></a>
+            <a href="https://www.instagram.com"><img class="logo-social responsive-img" src="/images/social/instagram.png" alt=""></a>
+             </div>
+            <div id="botonr" class="col-xs-4 col-sm-4 col-md-6 col-lg-6">
+             <!--  <input id="login-r" type="button" value="Registrate" onclick="mostrar();" class=" pull-right btn btn-info btn-large"> --></div>
+         </div>
+      </div>
+      </nav>
+      <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div id="Csociales" class="col-sm-5 col-md-5 col-lg-5  visible-md  visible-lg" ng-controller="HomeCtrl">
+                
+                <div class="container-social ">
+                 <div class="row">
+                <div class=" col-md-10 ">
+                    <a href="#" title="Facebook" class=" btn btn-block btn-social btn-lg btn-facebook " ng-click="authenticate('facebook')">
+                        <i class="fa fa-facebook"></i> Conectate con Facebook
+                    </a>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-10 ">
+                    <a href="#" title="Google" class="btn btn-block btn-social btn-lg btn-google" ng-click="authenticate('google')">
+                        <i class="fa fa-google-plus "></i> Conectate con Google
+                    </a>
+                </div>
+            </div>
+             <br />
+            <div class="row">
+                <div class="col-md-10">
+                    <a href="#" title="Windows Live Hotmail" class="btn btn-block btn-social btn-lg btn-twitter" ng-click="authenticate('twitter')">
+                        <i class="fa fa-twitter"></i> Conectate con Twitter
+                    </a>
+                </div>
+        
+            <div class="row">
+                 <div class="col-md-12  ">
+                    <br>
+                     <small class="spanColor">(sólo es una forma más rápida de registrarte, no publicamos nada en tus redes sociales.)</small>
+                 </div>
+            </div>
+            </div>
+          </div>
+           </div>
+            
+          <div class="col-sm-1 middle-border visible-md  visible-lg"></div>
+          <div class="col-sm-1"></div>
+
+                  <div class=" col-md-5 col-md-push-0">
+                  <div id="login">
+                   <div class="form-box">
+                              <div class="form-top visible-md  visible-lg">
+                                    <div class="form-top-left">
+                                      <div class="">
+                                      <img src="/images/logob.png" class=" logo img-fluid">
+                                     </div>
+                                   </div>
+                              <div class="form-top-right">
+                                 <i class="fa fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    <div class="form-bottom" ng-controller="HomeCtrl">
+                         <form role="form" ng-submit="signin()" method="POST" class="login-form" id="form_Login" ng-controller="HomeCtrl">
+                         
+                              <div class="form-group">
+                                <label class="sr-only" for="form-username">Username</label>
+                                  <input type="text" name="Email" id="Email" ng-model="Email" placeholder="Email o Usuario" class="form-username form-control" autocorrect="off" required data-error="Digite su nombre de usuario">
+                                </div>
+                                <div class="form-group">
+                                  <label class="sr-only" for="form-password">Password</label>
+                                  <input type="password" autocorrect="off" id="Contrasena" name="Contrasena" placeholder="Contraseña" class="form-password form-control" ng-model="Contrasena"  required data-error="Digite su password">
+                                </div>
+                                <div class="form-group">
+                                <button type="submit" class="btn">Entrar!</button>
+                                </div>
+                          </form>
+                      </div>
+                    
+                  <div class="form-bottom2 col-md-12 col-sm-12" >
+                  <p class="enunciado text-left"> Haz olvidado tu contraseña ? <a class="link" href="#">Click aquí</a> </p>
+                  <p class="enunciado text-left"> No tienes cuenta ?  <a onclick="registrar();" class="link" href="#">Registrate</a> </p>
+                  </div>
+                </div>
+                       
+                  <div id="registro" style="display: none;">
+                    <div class="form-box">
+                              <div class="form-top visible-md  visible-lg">
+                                    <div class="form-top-left">
+                                      <div class="">
+                                      <img src="/images/logob.png" class=" logo img-fluid">
+                                     </div>
+                                   </div>
+                              <div class="form-top-right">
+                                 <i class="fa fa-pencil"></i>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="form-bottom">
+                          <div class="social-movil hidden-md hidden-lg">
+                                <div class="row">
+                                <div class=" col-md-12">
+                                    <a href="#" title="Facebook" class=" btn btn-block btn-social btn-lg btn-facebook ">
+                                        <i class="fa fa-facebook"></i> Conectate con Facebook
+                                    </a>
+                                </div>
+                            </div>
+                          </div>
+                          <form role="form" ng-submit="signup()" method="POST" class="login-form" data-toggle="validator" ng-controller="registrarCtrl">
+                              <div class="form-group has-feedback">
+                                <label class="sr-only" for="form-username">Nombres</label>
+                                  <input type="text" name="regis_Nombres" placeholder="Nombre" class="form-username form-control" id="regis_Nombres" ng-model="regis_Nombres" required data-error="Debe ingresar sus nombres">
+                                
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                                <div class="form-group has-feedback">
+                                <label class="sr-only" for="form-username">Apellidos</label>
+                                  <input type="text" name="regis_Apellidos" required data-error="Debe ingresar sus apellidos" placeholder="Apellidos" ng-model="regis_Apellidos" class="form-username form-control" id="regis_Apellidos">
+                                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                <label class="sr-only" for="form-username">Email</label>
+                                  <input type="email" name="regis_Email" ng-model="regis_Email" placeholder="Email" class="form-username form-control" id="regis_Email" required data-error="Debe digitar su email">
+                                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                  <label class="sr-only" for="form-password">Password</label>
+                                  <input type="password" name="regis_Clave" ng-model="regis_Contrasena" placeholder="Contraseña" class="form-password form-control" id="regis_Clave" required data-error="Debe ingresar su password">
+                                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                  <label class="sr-only" for="form-password">C.Password</label>
+                                  <input type="password" name="regis_Repetir_Clave" ng-model="regis_Repetir_Contrasena" placeholder="Confirma Contraseña" class="form-password form-control" id="regis_Repetir_Clave" required data-error="Debe repetir su password">
+                                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                  <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group">
+                                  <button type="submit" class="btn">Registrate</button>
+                                  </div>
+                            </form>
+                      </div>
+
+                  <div class="form-bottom2 col-md-12 col-sm-12">
+                  <p class="enunciado text-left"> Ya tienes cuenta ?  <a  onclick="logiar();" class="link" href="#">Entra</a> </p>
+                  </div>
+
+                  </div> 
+                </div>
+            
+            <div class="col-md-6  visible-md visible-lg">
+            <h1 class="spanColor">000.000</h1>
+            <h3 class="spanColor"> Personas que hacen parte de Migoos </h3>
+            </div>
+            <div class="col-md-6 text-center">
+              <p class="spanColor"><h5 class="spanColor">Descarga la aplicación</h5></p>
+              <div class="con-tienda">
+              <a href="#"> <img class="tienda" src="/images/playstore.png" alt=""> </a>
+              <a href="#"> <img class="tienda" src="/images/appstore.png" alt=""> </a>
+              </div>
+            </div>
+           </div>
+      </div>
+      </div>
+
+      <footer id="pie">
+        <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+              <nav class="nav-footer" role="navigation">
+              <ul class="nav-pills">
+                <li class="linkf"> <a href="#"> Información</a></li>
+                <li class="linkf"> <a href="#"> Trabaja con Nosotros </a></li>
+                <li class="linkf"> <a href="#"> Privacidad</a></li>
+                <li class="linkf"> <a href="#"> Blog</a></li>
+                <li class="linkf"> <a href="#"> Condiciones</a></li>
+            </ul>
+            </nav>
+            <span class="text-right visible-md  visible-lg">© 2016 Migoos</span>
+              </div>
+          </div>
+        </div>
+      </footer>
+        <script languague="javascript">
+          function registrar() {
+              div = document.getElementById('registro');
+              div.style.display = '';
+              $("#login").attr("style","display:none");
+
+          }
+          function logiar() {
+              div = document.getElementById('login');
+              div.style.display = '';
+              $("#registro").attr("style","display:none");
+
+          }
+        </script>
+        <script type="text/javascript">
+    $(function(){
+      var imagenes = [
+          "/images/img2.jpg"
+          , "/images/img2.png"
+          , "/images/img3.png"
+          , "/images/img1.png"
+        ];
+
+        // Precarga de todas la imagenes
+      $(imagenes).each(function(){
+          $("<img/>")[0].src = this; 
+        });
+
+      // Almacena cual imagen esta activa
+        var index = 0;
+
+      // Aplicamos la primera imagen del arreglo 
+      // y lo configuramos para que realice un efecto de transición (fadeIn) 
+      // de 500 milisegundos entre cada cambio imagen
+      $.backstretch(imagenes[index], {speed: 500});
+
+      // setInterval es una funcion que se repite determinado tiempo
+      // en este caso cada 5000 milisegundos incrementando el index
+      // y aplicando una nueva imagen
+      setInterval(function() {
+          index = (index >= imagenes.length - 1) ? 0 : index + 1;
+          $.backstretch(imagenes[index]);
+        }, 5000);
+    });
+  </script>
+        </article>
+    <!-- /container -->
+
+</body>
+</html>
