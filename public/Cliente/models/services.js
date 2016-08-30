@@ -2,7 +2,7 @@
 
 angular.module('Miggos_Module')
     .factory('Main', ['$http', '$localStorage', function($http, $localStorage){
-        var baseUrl = "http://localhost:3000";
+        var baseUrl = "https://prueba-migoos.herokuapp.com";
         function changeUser(user) {
             angular.extend(currentUser, user);
         }
